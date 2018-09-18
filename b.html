@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Login</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/w3.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		
+		<style type="text/css">
+		#country{
+			height:200px;
+			width:100px;
+		}
+		</style>
+		
+		<script type="text/javascript">
+			$(function() {
+			
+				/*$('body').on('click', function (e) {
+				
+					var d = $(e.target).data('toggle');
+					var l = $(e.target).parents('.popover.in').length;
+					
+					console.log(l);
+					console.log(d);
+					
+					//did not click a popover toggle or popover
+					if (d === undefined && l === 0) { 
+						$('[data-toggle="popover"]').popover('hide');
+						//$('[data-toggle="popover"]').click();
+						//$('#pop1').popover('hide');
+						console.log(d+' '+l );
+						//alert('b');
+					}
+				});*/
+				
+				/*$('[data-toggle="popover"]').popover({
+					html: true,
+					content: function() {
+							return $('#popover-content').html();
+						},
+					trigger:"manual"
+				});*/
+				
+				$('#pop1').on('click', function(){
+					$('[data-toggle="popover"]').not('#pop1').popover('hide');
+					$('#pop1').popover('toggle');
+				});
+				
+				$('#pop1').on('blur', function(e){
+					//$('[data-toggle="popover"]').not('#pop1').popover('hide');
+					//$('#pop1').popover('toggle');
+					//alert('a');
+					
+					var d = $(e.target).data('toggle');
+					var l = $(e.target).parents('.popover.in').length;
+					
+					console.log(l);
+					console.log(d);
+					
+					//did not click a popover toggle or popover
+					if (d === "popover" && l === 0) { 
+						$('[data-toggle="popover"]').popover('hide');
+						//$('[data-toggle="popover"]').click();
+						//$('#pop1').popover('hide');
+						console.log(d+' '+l );
+						//alert('b');
+					}
+				});
+				
+				$('#pop2').on('click', function(e){
+					$('[data-toggle="popover"]').not('#pop2').popover('hide');
+					$('#pop2').popover('toggle');
+				});
+				
+				$('#pop1').popover({
+					html: true,
+					content: function() {
+							return $('#popover-content').html();
+						},
+					trigger:"manual"
+				});
+				
+				
+				$('#pop2').popover({
+					html: true,
+					content: function() {
+							return $('#pop2_con').html();
+						},
+					trigger:"manual"
+				});
+				
+				$('#set_data').on('click', function(e){
+				
+					$('#country').val(['BD','UAE']);
+					
+				});
+				
+				$('#get_data').on('click', function(e){
+				
+					var data = $('#country').val();
+					console.log(data);
+					
+				});
+				
+				
+			})
+
+		</script>
+
+	</head>
+
+	<body>
+		<!-- body content -->
+		<div class="container">
+		  <div class="row">
+			<div class="col-xs-12">
+			  <br />
+			  <br />
+			  <button type="button" id="pop1" class="btn btn-info" data-placement="right" data-toggle="popover" title="Popover title">Toggle popover</button>
+			  <br />
+			  <br />
+			  <br />
+			  <br />
+			  <br />
+			  <br />
+			  <br />
+			  <button type="button" id="pop2" class="btn btn-info" data-placement="bottom" data-toggle="popover" >Toggle popover</button>
+			  
+			</div>
+		  </div>
+		  <div id="pop2_con" style="display: none;">
+			<select name="country" id="country" multiple>
+				<option selected></option>
+				<option >BD</option>
+				<option >AU</option>
+				<option >KSA</option>
+				<option >UAE</option>
+			</select>
+			<br />
+			<button id="set_data" class="btn btn-success">Set</button><br /><br />
+			<button id="get_data" class="btn btn-info">Get</button><br />
+		  </div>
+		</div>
+
+		<!-- loaded popover content -->
+		<div id="popover-content" class="list-group" style="display: none">
+		  <div class="col-md-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Login</div>
+					<div class="panel-body">          
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<td>
+										<label>Username:</label>
+										<input class="w3-input" type="text" placeholder="Username">
+										<label>Password:</label>
+										<input class="w3-input" type="password" placeholder="Enter Password">
+										<button type="button" class="btn btn-primary" style="margin-top: 10px">Login</button>
+									</td>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End loaded popover content -->
+
+	</body>
+</html>

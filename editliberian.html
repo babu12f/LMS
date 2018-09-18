@@ -1,0 +1,59 @@
+<?php
+	require_once('db.php');
+	
+	$l_id = $_SESSION['user_id'];
+
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Add Liberian</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/w3.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="col-md-5 col-md-offset-4" style="margin-top:40px">
+				<div class="panel panel-primary">
+					<div class="panel-heading"><i class="fa fa-sign-in" ></i>Edit Liberian</div>
+					<div class="panel-body">          
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<td>
+										<form action="" method="post" >    
+											<label>Liberian Name:</label>
+											<input class="w3-input" type="text" placeholder="Liberian Name" name="" >
+											<label>Liberian Password:</label>
+											<input class="w3-input" type="password" placeholder="Liberian Password" name="" >
+											<label>Liberian Address:</label>
+											<input class="w3-input" type="text" placeholder="Liberian Address" name="" >
+											<label>Liberian Email:</label>
+											<input class="w3-input" type="email" placeholder="Liberian Email" name="" >
+											<button type="submit" class="btn btn-primary" style="margin-top: 10px" name="login" >Update</button>
+										</form>
+									</td>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</body>
+</html>

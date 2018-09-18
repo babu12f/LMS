@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>issuebook</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </head>
+<body>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-default">
+      <div class="panel-heading"><i class="fa fa-edit"></i>Panel heading</div>
+        <div class="panel-body">   <!-- start-panel -->
+        <div class="w3-container w3-blue">
+          <h3 style="text-align:center;">Issue Book</h3>
+        </div>
+          <div class="jumbotron">
+
+            <form class="w7-container">
+
+            <p>
+            <label>Issue Date</label>
+            <input class="w3-input" type="date"></p>
+			<p>
+            <label>Return Date</label>
+            <input class="w3-input" type="date"></p>
+            <p>
+            <label>Member Id</label>
+            <input class="w3-input" type="number" min="1" placeholder="Enter Member Id"></p>
+            <p>
+            <label>Member Name</label>
+            <input class="w3-input" type="text" placeholder="Member Name"></p>
+            <div class="form-group">
+              <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+              <div class="input-group">
+                <div class="input-group-addon">isbn</div>
+                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                  <div class="input-group-addon"><button type="button" class="">FETCH</button></div>
+                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                  <div class="input-group-addon"><button type="button" class="btn btn-danger">Danger</button></div>
+              </div>
+              <button type="button" class="btn btn-success">Success</button>
+            </div>
+            <button type="submit" class="btn btn-primary">Transfer cash</button>
+            </form>
+          </div>
+        </div> <!-- end-panel -->
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

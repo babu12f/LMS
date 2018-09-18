@@ -1,0 +1,97 @@
+<?php
+
+	require_once('db.php');
+	
+	//get pub
+	$sql_pub = "SELECT * FROM `publisher`";
+	$publicatin = $con->query($sql_pub);
+	
+	
+	//get auther
+	$sql_auth = "SELECT * FROM `author`";
+	$auth = $con->query($sql_auth);
+
+
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Book list</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+  
+<div class="container">
+  <div class="col-md-8" style="margin-top:40px">
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>
+		<form action="" method="post" >
+          <label class="control-label col-sm-2" for="email">Name:</label>
+          <div class="col-md-4" style="width: 80%">
+           <input type="text" id="disabledTextInput" name="b_n" class="form-control">
+        </div>
+        </th>
+        <th>
+          <select class="form-control" name="c_n">
+          <option selected disabled>category name</option>
+          <option>Disabled select</option>
+          <option>Disabled select</option>
+          </select>
+      </th>
+        <th>
+          <select  class="form-control" name="p_n">
+          <option selected disabled>pub name</option>
+          <option>Disabled select</option>
+          <option>Disabled select</option>
+          </select>
+        </th>
+      </tr>
+	  <tr>
+        <th>
+			<select  class="form-control" name="a_n">
+			  <option selected disabled>auth name</option>
+			  <option>Disabled select</option>
+			  <option>Disabled select</option>
+			  </select>
+        </th>
+        <th>
+			<button type="submit" class="btn btn-warning" name="search" >search</button>
+		</th>
+		<th></th>
+		</form>
+      </tr>
+    </thead>
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Book Name</th>
+        <th>Book Author</th>
+        <th>Book </th>
+        <th>Author Name</th>
+        <th>Action</th>
+        <th>Action</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>
+          <button type="button" class="btn btn-warning">Edit</button>
+          <button type="button" class="btn btn-danger" style="margin-right: 20px">Detete</button>
+        </th>
+      </tr>
+    </thead>
+  </div>
+</div>
+
+</body>
+</html>

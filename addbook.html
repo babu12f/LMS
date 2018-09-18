@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add Book</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </head>
+<body>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2" style="margin-top:40px">
+	<div class="panel panel-primary">
+      <div class="panel-heading">Add Book</div>
+       <div class="panel-body">
+     
+       <div class="jumbotron">
+
+      <form class="w7-container">
+
+      <p>
+      <label>Book Name</label>
+      <input class="w3-input" type="text" placeholder="Book Name"></p>
+      <p>
+      <label>Book Category</label>
+       <select class="form-control">
+          <option>Select 1</option>
+          <option>Select 2</option>
+          <option>Select 3</option>
+          <option>Select 4</option>
+          </select></p>
+		  <p><label>Book Author</label>
+       <select class="form-control" name="bookAuthor[]" multiple>
+          <option value="1">Select 1</option>
+          <option value="2">Select 2</option>
+          <option value="3">Select 3</option>
+          <option value="4">Select 4</option>
+          </select ></p>
+		  <p><label>Book Publisher</label>
+       <select class="form-control" name="bookPublisher[]" multiple>
+          <option value="1">Select 1</option>
+          <option value="2">Select 2</option>
+          <option value="3">Select 3</option>
+          <option value="4">Select 4</option>
+          </select ></p>
+      
+	  <p>
+      <label>Book Edition</label>
+      <input class="w3-input" type="text" placeholder="Book Edition"></p>
+      <p>
+	  <p>
+      <label>Book Available</label>
+       <select class="form-control">
+          <option>Yes</option>
+          <option>No</option>
+          </select></p>
+      <label>ISBN Number</label>
+      <input class="w3-input" type="text" placeholder="ISBN Number">
+      </p>
+      <p>
+      <label>Price</label>
+      <input class="w3-input" type="number" min="1" placeholder="Price">
+      </p>
+      <button type="button" class="btn btn-primary">Submit</button>
+
+
+
+
+      </form>
+	  </div>
+	  </div>
+    </div>
+    </div>
+</div>
+
+</body>
+</html>
